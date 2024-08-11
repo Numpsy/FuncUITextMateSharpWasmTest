@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-browser</TargetFramework>
+    <RuntimeIdentifier>browser-wasm</RuntimeIdentifier>
+    <OutputType>Exe</OutputType>
+    <WasmMainJSPath>wwwroot\main.js</WasmMainJSPath>
+    <WasmRuntimeAssetsLocation>./_framework</WasmRuntimeAssetsLocation>
+	  <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+	  <WasmEnableThreads>true</WasmEnableThreads>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="Properties\**" />
+    <None Include="wwwroot\**" />
+    <WasmExtraFilesToDeploy Include="wwwroot\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="runtimeconfig.template.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia.AvaloniaEdit" Version="11.1.0" />
+    <PackageReference Include="Avalonia.Browser" Version="11.1.2" />
+    <PackageReference Include="Avalonia.FuncUI" Version="1.4.0" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.1.2" />
+    <PackageReference Include="AvaloniaEdit.TextMate" Version="11.1.0" />
+    <PackageReference Include="TextMateSharp.Wasm" Version="1.0.59" />
+  </ItemGroup>
+
+</Project>

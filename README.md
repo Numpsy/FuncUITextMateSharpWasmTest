@@ -1,1 +1,1 @@
-# FuncUITextMateSharpWasmTest
+A small test for using AvaloniaEdit/TextMateSharp in a WASM application, using Avalonia.FuncUI
