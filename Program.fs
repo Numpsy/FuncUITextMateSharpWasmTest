@@ -27,7 +27,7 @@ type AvaloniaEdiComponent () =
     }
     """
 
-    let registryOptions = RegistryOptions(ThemeName.LightPlus)
+    let registryOptions = RegistryOptions(ThemeName.TomorrowNightBlue)
 
     override this.Build () : IView =
         ViewBuilder.Create<AvaloniaEdit.TextEditor> [
